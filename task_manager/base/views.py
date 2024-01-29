@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.db.models import Q
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 
@@ -17,7 +18,9 @@ def homePage(request):
 
 @login_required(login_url="login")
 def dashboardPage(request):
-    tasks = Task.objects.all()
+    q = request.GET.get("q") if request.GET.get("q") != None else ""
+
+    tasks = Task.objects.filter(Q(title__icontains=q))
     context = {
         "tasks": tasks,
     }

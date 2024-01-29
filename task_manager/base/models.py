@@ -21,7 +21,7 @@ class Task(models.Model):
     created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        ordering = ["-priority", "-updated", "-created"]
+        ordering = ["-priority", "-updated", "-created", "-task_complete"]
 
     def __str__(self):
         return self.title
