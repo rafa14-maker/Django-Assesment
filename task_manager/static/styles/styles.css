@@ -1,0 +1,60 @@
+body{
+    background-color: antiquewhite;
+    box-sizing: border-box;
+    text-align: center;
+    margin-left: 30vw;
+    margin-right :30vw;
+}
+
+.navbar-btn{
+    text-decoration: none;
+    background-color: blue;
+    color: azure;
+    padding: 5px;
+}
+
+.home{
+    font-size: large;
+    margin-top: 100px;
+}
+
+.login{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap : 20px;
+    border: solid 2px black;
+    height: 300px;
+    padding-top: 10px;
+}
+
+.register{
+ width:50px;
+}
+
+form .search{
+    margin-bottom: 2px;
+}
+
+
+a{
+    text-decoration: none;
+    background-color: blue;
+    color:aliceblue;
+    padding: 3px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+input{
+    margin-top:10px;
+    width:250px;
+     text-decoration: none;
+    padding: 3px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
