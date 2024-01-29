@@ -8,4 +8,7 @@ urlpatterns = [
     path("register/", views.RegisterUser, name="register"),
     path("logout/", views.logoutUser, name="logout"),
     path("dashboard/", views.dashboardPage, name="dashboard"),
+    path("createTask/", views.createTask, name="createTask"),
+    path("updateTask/<str:pk>/", views.updateTask, name="updateTask"),
+    path("deleteTask/<str:pk>/", views.deleteTask, name="deleteTask"),
 ]

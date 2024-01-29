@@ -4,4 +4,25 @@
 
 <h2>Welcome to DashBoard</h2>
 
+<div>
+    <a href="{% url 'createTask' %}">Creat Task</a>
+</div>
+
+<div>
+    {% for task in tasks %}
+      <p> title  : {{ task.title  }}</p>
+      <p> description  : {{ task.description  }}</p>
+      <p> priority  : {{ task.priority  }}</p>
+      <p> Due_Date  : {{ task.task_due_date  }}</p>
+      <p> Status  : {{ task.task_complete  }}</p>
+      <p> Updated  : {{ task.updated|timesince  }}</p>
+
+      {% if user == task.host  %}
+           <a href="{% url 'updateTask' task.id %}">Edit</a>
+           <a href="{% url 'deleteTask' task.id %}">Delete</a>
+       {% endif %}
+      <hr>
+    {% endfor %}
+</div>
+
 {% endblock content %}
